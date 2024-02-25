@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Todo List</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
@@ -31,19 +31,32 @@
 
 <body>
     <div class="wrapper">
-        <section class="todo-list py-3">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h1 class="display-1 text-muted"> Todo List </h1>
-                        <ul class="list-group list-group-flush border border-1 rounded">
-                            <li class="list-group-item">First Task</li>
-
-                        </ul>
+        <div>
+            <section class="todo-list py-3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 class="display-1 text-muted"> Todo List </h1>
+                            <ul class="list-group list-group-flush border border-1 rounded">
+                                <li class="list-group-item">Task</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+            <section class="add-todo">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Inserisci nuova Task...">
+                                <button class="btn btn-outline-warning" type="button" id="button-add">Inserisci</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </div>
 </body>
 
