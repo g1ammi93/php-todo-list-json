@@ -1,31 +1,16 @@
 const { createApp } = Vue;
 
+const endpoint = 'http://localhost/Boolean/php-todo-list-json/tasks/';
+
 const app = createApp({
     data: () => ({
-        task: [
-            {
-                "id": 1,
-                "text": "HTML",
-                "done": true
-            },
-            {
-                "id": 2,
-                "text": "CSS",
-                "done": true
-            },
-            {
-                "id": 3,
-                "text": "Responsive design",
-                "done": true
-            },
-            {
-                "id": 4,
-                "text": "Javascript",
-                "done": true
-            }
-        ]
-    })
-
+        tasks: []
+    }),
+    created() {
+        axios.get(endpoint).then(res => {
+            this.tasks = res.data;
+        })
+    }
 })
 
 app.mount('#app')

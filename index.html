@@ -31,14 +31,14 @@
 
 <body>
     <div class="wrapper">
-        <div>
+        <div id="app">
             <section class="todo-list py-3">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
                             <h1 class="display-1 text-muted"> Todo List </h1>
-                            <ul class="list-group list-group-flush border border-1 rounded">
-                                <li class="list-group-item">Task</li>
+                            <ul class="list-group list-group-flush border border-1 rounded" id="taskList">
+                                <li v-for="task in tasks" :key="task.id" class="list-group-item">{{ task.text}}</li>
                             </ul>
                         </div>
                     </div>
